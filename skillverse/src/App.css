@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-bounce-on-hover:hover {
+    animation: bounce 0.6s ease-in-out infinite;
+  }
+  
+
+
+
+
+
+
+
+
+
+/* test */
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .transition-transform {
+    transition-property: transform;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .space-x-8 > * + * {
+    margin-left: 2rem;
+  }
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+
+.bg-indigo-600 {
+    background-color: #6B46C1; /* Use a vibrant and appealing color */
+  }
+  
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .space-x-4 > * + * {
+    margin-left: 1rem;
+  }
+  
+  .text-white {
+    color: #ffffff; /* White text color */
+  }
+  
+  .hover:text-gray-300:hover {
+    color: #718096; /* Gray hover color */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* Larger text size for heading */
+  }
+  
+  .text-xl {
+    font-size: 1.25rem; /* Larger text size for heading */
+  }
+  
