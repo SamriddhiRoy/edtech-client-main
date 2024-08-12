@@ -6,10 +6,10 @@ function Navbar() {
       <div className="h-27 flex flex-row justify-between bg-white drop-shadow-md py-2">
         <div>
           <img
-            src="/logo.png"
+            src="/logo2.png"
             alt="SkillVerses Logo"
             className="p-2" // Keep the padding
-            style={{ width: '120px', height: '100px' }} // Adjust size
+            style={{ width: '190px', height: '80px' }} // Adjust size
           />
         </div>
         <div className="flex flex-row justify-around">
