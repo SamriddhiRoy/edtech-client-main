@@ -110,3 +110,247 @@
     font-size: 1.25rem; /* Larger text size for heading */
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Ensure that the background image covers the entire section */
+.why-choose-us {
+  position: relative;
+  background-image: url('https://develop.skillcraftersco.pages.dev/static/media/bg_illustration_3.4fd52d6a6586919ab156.svg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 120vh; /* Adjust height as needed */
+  color: white;
+  
+  padding-top: 3rem; /* Adjust top padding as needed */
+  padding-bottom: 4rem; /* Adjust bottom padding as needed */
+  box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.why-choose-us-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.why-choose-us-content {
+  position: relative;
+  z-index: 10;
+  padding: 2rem; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.why-choose-us-title {
+  font-size: 2rem; /* Adjust for your needs */
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .why-choose-us-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .why-choose-us-grid {
+    grid-template-columns: repeat(4, 1fr); /* Four columns on large screens */
+  }
+}
+
+.why-choose-us-box {
+  background-color: white;
+  color: #333; /* Dark text for better readability */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.why-choose-us-icon {
+  font-size: 2rem; /* Adjust icon size */
+  margin-bottom: 1rem;
+}
+
+.why-choose-us-box h3 {
+  font-size: 1.25rem; /* Adjust title size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.why-choose-us-box p {
+  font-size: 1rem; /* Adjust description size */
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+/* Global styles for the pastel colors */
+.bg-pastel-yellow {
+  background-color: #fef5d7; /* Pastel Yellow */
+}
+
+.bg-pastel-blue {
+  background-color: #d0e7f9; /* Pastel Blue */
+}
+
+/* About Us Section Styles */
+.bg-transparent {
+  background: transparent;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.text-green-600 {
+  color: #4a8f2d; /* Green Color for About Us Title */
+}
+
+.text-yellow-500 {
+  color: #f9c74f; /* Yellow Color for Mission Title */
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w-[41vw] {
+  width: 41vw;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+  position: relative;
+  background-color: #f0f4f8;
+  padding: 2rem;
+}
+
+.why-choose-us-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.why-choose-us-content {
+  position: relative;
+  z-index: 2;
+}
+
+.why-choose-us-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.why-choose-us-box {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us-icon {
+  font-size: 2rem;
+  color: #4a8f2d; /* Adjust icon color as needed */
+}
+
+.why-choose-us-box h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.why-choose-us-box p {
+  font-size: 0.875rem;
+}
+
+
+
+
+
+
+
+
+
+
+.blue-star-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blue-star-list li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.blue-star-list li::before {
+  content: '\2605'; /* Unicode star character */
+  color: #1e40af; /* Blue color */
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+

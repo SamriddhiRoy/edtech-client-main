@@ -1,23 +1,23 @@
 import React from 'react';
 import { FaHandsHelping, FaChalkboardTeacher, FaLightbulb, FaChild } from 'react-icons/fa';
 
-const RoboCHAMPS = () => {
+
+const WebDevelopmentPackages = () => {
   return (
     <div className="p-10 bg-blue-50 min-h-screen flex items-center justify-center">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
-       
         <div className="flex items-center mb-8">
           <div className="w-1/2 pr-8">
-            <img src="https://via.placeholder.com/600x400" alt="Robotics" className="rounded-lg shadow-lg" />
+            <img src="https://via.placeholder.com/600x400" alt="Web Development" className="rounded-lg shadow-lg" />
           </div>
           <div className="w-1/2">
             <div>
-              <h1 className="text-5xl font-bold text-center text-indigo-600 mb-8 animate-fade-in">RoboCHAMPS</h1>
+              <h1 className="text-5xl font-bold text-center text-indigo-600 mb-8 animate-fade-in">Web Development</h1>
               <p className="text-lg text-gray-700 mb-4 animate-slide-left">
-                Welcome to RoboCHAMPS, where you can unleash your robotics genius! Innovate, tinker, and experiment with our comprehensive courses.
+                Embark on an exciting journey as you master web technologies and create interactive digital experiences. In our comprehensive course, you’ll unlock your potential with hands-on training and real-world projects. Transform your ideas into functional websites and explore cutting-edge technologies with expert guidance.
               </p>
               <p className="text-lg text-gray-700 mb-4 animate-slide-right">
-                Engage in hands-on projects, build problem-solving skills, and explore cutting-edge technology with expert guidance in a supportive learning environment.
+                Get ready to dive into the future of digital innovation, develop essential skills for the modern web, and start building your career with interactive lessons and practical coding experience. Join us and take the first step towards crafting engaging and impactful web solutions.
               </p>
             </div>
             <div className="text-center mt-8">
@@ -28,9 +28,8 @@ const RoboCHAMPS = () => {
           </div>
         </div>
 
-       
         <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-center text-indigo-600 mb-4 animate-fade-in">Why Choose RoboCHAMPS?</h2>
+          <h2 className="text-3xl font-bold text-center text-indigo-600 mb-4 animate-fade-in">Why Choose Web Development?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-center animate-slide-left">
               <div className="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center text-2xl font-bold">
@@ -38,7 +37,7 @@ const RoboCHAMPS = () => {
               </div>
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">Hands-On Learning</h3>
-                <p className="text-gray-700">Experience hands-on projects that spark creativity and problem-solving skills.</p>
+                <p className="text-gray-700">Build Real-World Skills with Hands-On Projects and Interactive Coding</p>
               </div>
             </div>
             <div className="flex items-center animate-slide-right">
@@ -46,8 +45,8 @@ const RoboCHAMPS = () => {
                 <FaChalkboardTeacher />
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Expert Guidance</h3>
-                <p className="text-gray-700">Learn from industry experts who provide personalized guidance and support.</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Expert Instructors</h3>
+                <p className="text-gray-700">Master the Latest Web Technologies with Guidance from Industry Experts</p>
               </div>
             </div>
             <div className="flex items-center animate-slide-left">
@@ -55,8 +54,8 @@ const RoboCHAMPS = () => {
                 <FaLightbulb />
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Innovative Curriculum</h3>
-                <p className="text-gray-700">Explore a curriculum designed to nurture curiosity and innovation in robotics.</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Career Support</h3>
+                <p className="text-gray-700">Receive Personalized Career Support and Advice to Launch Your Future</p>
               </div>
             </div>
             <div className="flex items-center animate-slide-right">
@@ -64,68 +63,91 @@ const RoboCHAMPS = () => {
                 <FaChild />
               </div>
               <div className="ml-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Fun Learning Environment</h3>
-                <p className="text-gray-700">Join a community of young innovators in a fun and supportive learning environment.</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Real-World Application</h3>
+                <p className="text-gray-700">Apply What You Learn to Real-World Projects and Build a Strong Portfolio</p>
               </div>
             </div>
           </div>
         </div>
 
-       
         <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg p-8">
           <h2 className="text-3xl font-bold text-center text-indigo-600 mb-4 animate-fade-in">Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Basic Package */}
             <div className="bg-white rounded-lg p-6 shadow-md animate-slide-left">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   <FaHandsHelping />
                 </div>
-                <h3 className="text-xl font-bold text-indigo-600 ml-4">Basic</h3>
+                <h3 className="text-xl font-bold text-indigo-600 ml-4">Basic Package</h3>
               </div>
-              <ul className="text-gray-700">
-                <li className="mb-2">Introduction to Robotics</li>
-                <li className="mb-2">Basic Programming Concepts</li>
-                <li className="mb-2">1 Project</li>
-                <li className="mb-2">Community Support</li>
-              </ul>
+              <ul className="text-gray-700 mb-4 list-disc list-inside blue-star-list">
+                <li className="mb-2">HTML: Build the structure of your websites.</li>
+                <li className="mb-2">CSS: Style and layout your web pages.</li>
+                <li className="mb-2">JavaScript: Add interactivity to your sites.</li>
+                <li className="mb-2">Building Responsive Websites: Create designs that work on any device.</li>
+                <li className="mb-2">Version Control: Track changes and collaborate with ease.</li>
+                <li className="mb-2"> GitHub and Deployment: Manage your code and deploy your projects.</li>
+            
+            <li className="mb-2">  Projects: Complete 10+ exciting hands-on projects to apply your skills. </li>  </ul>
+            <p className="text-blue-500 mb-4">
+  Start your journey for just <span className="bg-yellow-200 text-blue-600 font-bold">$15 per class.</span>
+</p>
+
+
               <div className="text-center mt-4">
                 <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                   Choose Basic
                 </button>
               </div>
             </div>
+
+            {/* Standard Package */}
             <div className="bg-white rounded-lg p-6 shadow-md animate-slide-up">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   <FaChalkboardTeacher />
                 </div>
-                <h3 className="text-xl font-bold text-indigo-600 ml-4">Standard</h3>
+                <h3 className="text-xl font-bold text-indigo-600 ml-4">Standard Package</h3>
               </div>
-              <ul className="text-gray-700">
-                <li className="mb-2">Advanced Robotics Techniques</li>
-                <li className="mb-2">Programming Challenges</li>
-                <li className="mb-2">2 Projects</li>
-                <li className="mb-2">Expert Mentorship</li>
-              </ul>
+              <ul className="text-gray-700 mb-4 list-disc list-inside blue-star-list">
+                <li className="mb-2">Advanced HTML & CSS: Dive deeper into sophisticated web design techniques.</li>
+                <li className="mb-2">Modern JavaScript: Learn the latest features and best practices.</li>
+                <li className="mb-2">CSS and Its Frameworks: Utilize popular frameworks to enhance your designs.</li>
+                <li className="mb-2">Problem Solving and Automation: Tackle coding challenges and automate tasks.</li>
+                <li className="mb-2">React: Build dynamic user interfaces with this powerful library.</li>
+                <li className="mb-2">APIs and Real-Time Data: Connect your applications to live data sources.</li>
+              
+              <li className="mb-2">Projects: Create 20+ impressive projects that showcase your growing expertise!</li></ul>
+              <p className="text-blue-500 mb-4">
+  Start your journey for just <span className="bg-yellow-200 text-blue-600 font-bold">$15 per class.</span>
+</p>
               <div className="text-center mt-4">
                 <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                   Choose Standard
                 </button>
               </div>
             </div>
+
+            {/* Premium Package */}
             <div className="bg-white rounded-lg p-6 shadow-md animate-slide-right">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   <FaLightbulb />
                 </div>
-                <h3 className="text-xl font-bold text-indigo-600 ml-4">Premium</h3>
+                <h3 className="text-xl font-bold text-indigo-600 ml-4">Premium Package</h3>
               </div>
-              <ul className="text-gray-700">
-                <li className="mb-2">Advanced Robotics and AI Integration</li>
-                <li className="mb-2">Real-World Applications</li>
-                <li className="mb-2">3 Projects</li>
-                <li className="mb-2">Personalized Coaching</li>
+              <ul className="text-gray-700 mb-4 list-disc list-inside blue-star-list">
+                <li className="mb-2">Foundations of Web Development: Master the core principles of full-stack development.</li>
+                <li className="mb-2">Node.js: Learn server-side programming with this essential tool.</li>
+                <li className="mb-2">SQL Database Management: Manage and manipulate databases efficiently.</li>
+                <li className="mb-2">Integrating Frontend and Backend: Seamlessly connect your front-end and back-end code.</li>
+                <li className="mb-2">Error Handling and Logging: Ensure your applications run smoothly with robust error management.</li>
+                <li className="mb-2">Version Control and Deployment: Perfect your skills in code management and project deployment.</li>
               </ul>
+              <p className="text-blue-500 mb-4">
+  Start your journey for just <span className="bg-yellow-200 text-blue-600 font-bold">$15 per class.</span>
+</p>
               <div className="text-center mt-4">
                 <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                   Choose Premium
@@ -139,8 +161,6 @@ const RoboCHAMPS = () => {
   );
 };
 
-export default RoboCHAMPS;
-
-
+export default WebDevelopmentPackages;
 
 

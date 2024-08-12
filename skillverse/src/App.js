@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Demo from "./components/Demo";
-import HomePage from "./components/HomePage";
+import Cousesall from "./components/cousesall";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Footer from "./components/Footer";
+import Faq from "./components/Faq";
 import RoboCHAMPS from "./components/RoboCHAMPS";
 import "./App.css";
-import DemoPage from "./pages/DemoPage";
+import DemoPage from "./pages/Demo";
+
 
 function App() {
   return (
@@ -23,8 +25,10 @@ function App() {
               <>
                 <Banner />
                 <Demo />
-                <HomePage />
+                <Cousesall />
                 <TestimonialsSection />
+                <Faq/>
+               
               </>
             }
           />

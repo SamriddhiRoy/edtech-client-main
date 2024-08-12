@@ -1,20 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import { FaRobot, FaCode, FaPiggyBank, FaLanguage, FaBrain } from 'react-icons/fa';
 
 const CourseCard = ({ icon, title, description, bgColor, hoverColor, shadowColor }) => {
 
+  // Define the course paths based on the title
   const coursePaths = {
-    RoboCHAMPS: '/robochamps',
-    CodeCHAMPS: '/courses/codechamps',
-    FinCHAMPS: '/courses/finchamps',
-    LingoCHAMPS: '/courses/lingochamps',
-    GenerativeAI: '/courses/generativeai',
+    'Web Development': '/RoboCHAMPS',
+    'Python + Machine Learning': '/python-machine-learning',
+    'App Development': '/appdevelopment',
+    'Cyber Security': '/cybersecurity',
+    'Scratch': '/scratch',
+    'Mathematics': '/mathematics'
   };
 
- 
+  // Get the path for the course based on the title
   const getCoursePath = (title) => {
-    return coursePaths[title];
+    return coursePaths[title] || '/';
   };
 
   return (
@@ -23,9 +24,12 @@ const CourseCard = ({ icon, title, description, bgColor, hoverColor, shadowColor
         {icon}
       </div>
       <div className="font-bold text-xl mb-2 text-center text-indigo-600 relative z-10">{title}</div>
-      <p className="text-gray-700 text-base text-center relative z-10">{description}</p>
+      <div className="text-gray-700 text-base text-center relative z-10">
+        {description.map((line, index) => (
+          <p key={index} className="mb-2">{line}</p>
+        ))}
+      </div>
       <div className="flex justify-center mt-4 relative z-10">
-     
         <Link to={getCoursePath(title)} className="text-center">
           <button className="bg-white text-gray-800 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
             Explore Now
