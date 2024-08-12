@@ -1,17 +1,22 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Demo from "./components/Demo";
-import Cousesall from "./components/cousesall";
+import Cousesall from "./components/Cousesall";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Footer from "./components/Footer";
 import Faq from "./components/Faq";
 import RoboCHAMPS from "./components/RoboCHAMPS";
-import "./App.css";
+import Python from "./components/Python";
 import DemoPage from "./pages/Demo";
 
+// Import new components
+import AppDevelopment from "./components/AppDevelopment";
+import Cybersecurity from "./components/Cybersecurity";
+import Mathematics from "./components/Mathematics";
+
+import "./App.css";
 
 function App() {
   return (
@@ -27,13 +32,18 @@ function App() {
                 <Demo />
                 <Cousesall />
                 <TestimonialsSection />
-                <Faq/>
-               
+                <Faq />
               </>
             }
           />
           <Route path="/robochamps" element={<RoboCHAMPS />} />
+          <Route path="/python" element={<Python />} />
           <Route path="/demo" element={<DemoPage />} />
+          
+          {/* Add new routes */}
+          <Route path="/appdevelopment" element={<AppDevelopment />} />
+          <Route path="/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/mathematics" element={<Mathematics />} />
         </Routes>
         <Footer />
       </div>

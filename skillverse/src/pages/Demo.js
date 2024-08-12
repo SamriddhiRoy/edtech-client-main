@@ -6,44 +6,46 @@ function DemoPage() {
     {
       title: "Hands-On Experience",
       description:
-        "Get a feel for the interactive and engaging teaching style.",
+        "Dive into practical exercises and real-world examples to see how concepts are applied in practice.",
       bgColor: "bg-red-100",
       hoverColor: "hover:bg-red-200",
       shadowColor: "bg-red-300",
     },
     {
-      title: "Curriculum Overview",
+      title: "Get a Feel for Our Teaching Style",
       description:
-        "Understand the course structure and content that will be covered.",
+        "Experience our unique, interactive, and engaging teaching approach that makes learning enjoyable and effective.",
       bgColor: "bg-blue-100",
       hoverColor: "hover:bg-blue-200",
       shadowColor: "bg-blue-300",
     },
     {
-      title: "Meet the Instructor",
+      title: "Curriculum Overview",
       description:
-        "Interact with the instructor to gauge their expertise and teaching methods.",
+        "Gain insight into the comprehensive course structure and the specific content that will be covered, ensuring it aligns with your learning goals.",
       bgColor: "bg-green-100",
       hoverColor: "hover:bg-green-200",
       shadowColor: "bg-green-300",
     },
     {
-      title: "Interactive Learning Environment",
+      title: "Meet the Instructor",
       description:
-        "Experience the dynamic and supportive learning environment first-hand.",
+        "Interact with the instructor to assess their expertise, teaching methods, and how well they connect with students.",
       bgColor: "bg-yellow-100",
       hoverColor: "hover:bg-yellow-200",
       shadowColor: "bg-yellow-300",
     },
+    
     {
       title: "Q&A Session",
       description:
-        "Get all your questions answered about the course, schedule, and outcomes.",
-      bgColor: "bg-purple-100",
-      hoverColor: "hover:bg-purple-200",
-      shadowColor: "bg-purple-300",
+        "Have an open forum to ask any questions about the course, schedule, learning outcomes, and more to make an informed decision.",
+      bgColor: "bg-pink-100",
+      hoverColor: "hover:bg-pink-200",
+      shadowColor: "bg-pink-300",
     },
   ];
+
   const rightInput = [
     {
       id: "email",
@@ -66,6 +68,7 @@ function DemoPage() {
       placeholder: "Country",
     },
   ];
+  
   const leftInput = [
     {
       id: "pName",
@@ -88,6 +91,7 @@ function DemoPage() {
       placeholder: "City",
     },
   ];
+
   const [formData, setFormData] = useState({
     pName: "",
     sName: "",
@@ -97,6 +101,7 @@ function DemoPage() {
     number: "",
     country: "",
   });
+
   const handleSubmit = () => {
     // make request with form Data
   };
@@ -104,7 +109,7 @@ function DemoPage() {
   return (
     <div className="mb-20">
       <div
-        className=" m-7 h-72 bg-[length:95vw_288px] rounded-3xl flex justify-center items-center text-center"
+        className="m-7 h-72 bg-[length:95vw_288px] rounded-3xl flex justify-center items-center text-center"
         style={{ backgroundImage: "url('/DemoBanner4.png')" }}
       >
         <h2 className="sm:text-5xl md:text-6xl text-9xl font-semibold uppercase bg">
@@ -124,10 +129,10 @@ function DemoPage() {
                 <img
                   className="sm:w-10 sm:h-10 h-6 w-6"
                   src="https://cdn-icons-png.flaticon.com/512/8634/8634230.png"
-                  alt=""
+                  alt="Apply for Demo class"
                 />
                 <h3 className="text-center sm:w-32 w-24 font-medium sm:text-sm text-xs mt-2">
-                  Apply for Demo className
+                  Apply for Demo class
                 </h3>
               </div>
               <div className="border-t-4 border-black w-full h-2 mt-7"></div>
@@ -135,7 +140,7 @@ function DemoPage() {
                 <img
                   className="sm:w-10 sm:h-10 h-6 w-6"
                   src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png"
-                  alt=""
+                  alt="Schedule a meet"
                 />
                 <h3 className="text-center sm:w-32 w-24 font-medium sm:text-sm text-xs mt-2">
                   Schedule a meet
@@ -146,7 +151,7 @@ function DemoPage() {
                 <img
                   className="sm:w-10 sm:h-10 h-6 w-6"
                   src="https://cdn-icons-png.flaticon.com/512/2997/2997592.png"
-                  alt=""
+                  alt="Take the Demo class"
                 />
                 <h3 className="text-center sm:w-32 w-24 font-medium sm:text-sm text-xs mt-2">
                   Take the Demo class
@@ -157,32 +162,32 @@ function DemoPage() {
           <div className="flex flex-row justify-around">
             <div>
               {leftInput.map((input, index) => (
-                <div className="mb-7">
+                <div className="mb-7" key={input.id}>
                   <input
                     className="shadow appearance-none border rounded w-[120%] py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
-                    id={`${input.id}`}
+                    id={input.id}
                     type="text"
                     value={formData[input.value]}
                     onChange={(e) => {
                       setFormData({ ...formData, [input.id]: e.target.value });
                     }}
-                    placeholder={`${input.placeholder}`}
+                    placeholder={input.placeholder}
                   />
                 </div>
               ))}
             </div>
             <div>
               {rightInput.map((input, index) => (
-                <div className="mb-7">
+                <div className="mb-7" key={input.id}>
                   <input
                     className="shadow appearance-none border rounded w-[120%] py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
-                    id={`${input.id}`}
+                    id={input.id}
                     type="text"
                     value={formData[input.value]}
                     onChange={(e) => {
                       setFormData({ ...formData, [input.id]: e.target.value });
                     }}
-                    placeholder={`${input.placeholder}`}
+                    placeholder={input.placeholder}
                   />
                 </div>
               ))}
@@ -190,7 +195,7 @@ function DemoPage() {
           </div>
           <div className="flex justify-center ">
             <button
-              className=" mt-4 px-7 py-1 mx-2 my-4 text-[1.3rem] bg-green-600 rounded-lg text-white border-2 border-green-600 hover:bg-white hover:text-green-600 "
+              className="mt-4 px-7 py-1 mx-2 my-4 text-[1.3rem] bg-green-600 rounded-lg text-white border-2 border-green-600 hover:bg-white hover:text-green-600"
               onClick={handleSubmit}
             >
               Register for Demo Class

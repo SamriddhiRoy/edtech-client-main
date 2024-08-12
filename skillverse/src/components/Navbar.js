@@ -6,16 +6,17 @@ function Navbar() {
       <div className="h-27 flex flex-row justify-between bg-white drop-shadow-md py-2">
         <div>
           <img
-            src="https://develop.skillcraftersco.pages.dev/static/media/BlackLogoSkillCraftersCo.dc2bf9409381be5ae73e.png"
-            alt=""
-            className="h-20 p-4"
+            src="/logo.png"
+            alt="SkillVerses Logo"
+            className="p-2" // Keep the padding
+            style={{ width: '120px', height: '100px' }} // Adjust size
           />
         </div>
         <div className="flex flex-row justify-around">
           <button className="px-8 py-1 my-4 mx-2 bg-orange-500 rounded-lg text-white font-bold">
             Explore
           </button>
-          <button className="px-4 py-1 mx-2 my-4 font-bold  hover:text-orange-400">
+          <button className="px-4 py-1 mx-2 my-4 font-bold hover:text-orange-400">
             Courses
           </button>
           <button className="px-4 py-1 mx-2 my-4 font-bold hover:text-orange-400">

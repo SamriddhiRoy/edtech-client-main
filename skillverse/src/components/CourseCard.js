@@ -6,11 +6,11 @@ const CourseCard = ({ icon, title, description, bgColor, hoverColor, shadowColor
   // Define the course paths based on the title
   const coursePaths = {
     'Web Development': '/RoboCHAMPS',
-    'Python + Machine Learning': '/python-machine-learning',
-    'App Development': '/appdevelopment',
-    'Cyber Security': '/cybersecurity',
+    'Python + Machine Learning': '/Python',
+    'App Development': '/AppDevelopment',
+    'Cyber Security': '/Cybersecurity',
     'Scratch': '/scratch',
-    'Mathematics': '/mathematics'
+    'Mathematics': '/Mathematics'
   };
 
   // Get the path for the course based on the title
