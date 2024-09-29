@@ -5,13 +5,24 @@ const AppDevelopmentPackages = () => {
   return (
     <div className="p-10 bg-gray-50 min-h-screen flex items-center justify-center">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        <div className="text-center mb-8">
+      <div className="flex items-center mb-8">
+          <div className="w-1/2 pr-8">
+          <img
+              src="/app.png" // Using web.png from the public folder
+              alt="Web Development"
+              className="w-full max-w-[900px] h-[300px] rounded-lg shadow-lg animate-fadeIn object-cover"
+              loading="lazy" // Improves performance by lazy loading the image
+            />
+          </div>
+          <div className="w-1/2">
+            <div>
           <h1 className="text-5xl font-bold text-yellow-600 mb-4">App Development</h1>
           <p className="text-lg text-gray-700 mb-4">
             Dive into the exciting world of app development and learn how to create impactful mobile applications. Our comprehensive courses cover everything from the basics of React and React Native to advanced app development techniques. Gain practical experience with real-world projects and modern tools. Learn from expert instructors who will guide you in building and launching your own apps. Start your journey with us and unlock new opportunities in the app development industry!
           </p>
         </div>
-
+        </div>
+        </div>
         <div className="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg p-8 mb-8">
           <h2 className="text-3xl font-bold text-center text-yellow-600 mb-4">Why Choose Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

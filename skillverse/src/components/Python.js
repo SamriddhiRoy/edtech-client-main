@@ -7,7 +7,12 @@ const PythonCourses = () => {
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <div className="flex items-center mb-8">
           <div className="w-1/2 pr-8">
-            <img src="https://via.placeholder.com/600x400" alt="AI and Machine Learning" className="rounded-lg shadow-lg" />
+          <img
+              src="/python.png" // Using web.png from the public folder
+              alt="Web Development"
+              className="w-full max-w-[900px] h-[300px] rounded-lg shadow-lg animate-fadeIn object-cover"
+              loading="lazy" // Improves performance by lazy loading the image
+            />
           </div>
           <div className="w-1/2">
             <div>

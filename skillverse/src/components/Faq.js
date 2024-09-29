@@ -1,7 +1,9 @@
-import React from 'react';
-import { FaShieldAlt, FaUserCheck, FaBookReader, FaTachometerAlt, FaCertificate, FaStar } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaShieldAlt, FaUserCheck, FaBookReader, FaTachometerAlt, FaCertificate, FaStar, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const FAQPage = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const faqs = [
     {
       question: "How do you ensure the safety and privacy of students during online classes?",
@@ -41,18 +43,30 @@ const FAQPage = () => {
     }
   ];
 
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="text-4xl font-bold text-center text-indigo-700 mb-8">Frequently Asked Questions</h1>
       <div className="space-y-6">
         {faqs.map((faq, index) => (
-          <div key={index} className={`flex items-start p-6 rounded-lg shadow-md ${faq.color}`}>
-            <div className="flex-shrink-0 mr-4">
-              {faq.icon}
+          <div key={index} className={`p-6 rounded-lg shadow-md ${faq.color}`}>
+            <div 
+              className="flex items-center cursor-pointer"
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="flex-shrink-0 mr-4">{faq.icon}</div>
+              <h2 className="text-2xl font-semibold text-gray-800 flex-1">{faq.question}</h2>
+              <div>
+                {activeIndex === index ? <FaChevronUp size={24} /> : <FaChevronDown size={24} />}
+              </div>
             </div>
-            <div className="flex-1">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{faq.question}</h2>
-              <p className="text-gray-700">{faq.answer}</p>
+            <div
+              className={`overflow-hidden transition-max-height duration-500 ease-in-out ${activeIndex === index ? 'max-h-screen' : 'max-h-0'}`}
+            >
+              <p className="text-gray-700 mt-4">{faq.answer}</p>
             </div>
           </div>
         ))}
@@ -62,3 +76,4 @@ const FAQPage = () => {
 };
 
 export default FAQPage;
+
