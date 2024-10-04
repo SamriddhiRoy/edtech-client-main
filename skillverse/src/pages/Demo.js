@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Card from "../components/Card";
 
 function DemoPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   const courses = [
     {
       title: "Hands-On Experience",
@@ -35,7 +38,6 @@ function DemoPage() {
       hoverColor: "hover:bg-yellow-200",
       shadowColor: "bg-yellow-300",
     },
-    
     {
       title: "Q&A Session",
       description:
@@ -68,7 +70,7 @@ function DemoPage() {
       placeholder: "Country",
     },
   ];
-  
+
   const leftInput = [
     {
       id: "pName",
@@ -103,28 +105,28 @@ function DemoPage() {
   });
 
   const handleSubmit = () => {
-    // make request with form Data
+    // Make request with form Data
   };
 
   return (
     <div className="mb-20">
       <div
-        className="m-7 h-72 bg-[length:95vw_288px] rounded-3xl flex justify-center items-center text-center"
+        className="m-4 h-72 bg-[length:95vw_288px] rounded-3xl flex justify-center items-center text-center"
         style={{ backgroundImage: "url('/DemoBanner4.png')" }}
       >
-        <h2 className="sm:text-5xl md:text-6xl text-9xl font-semibold uppercase bg">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold uppercase">
           Take our demo
           <br />
           class today!
         </h2>
       </div>
-      <div className="flex flex-row justify-center">
-        <div className="bg-[url('https://develop.skillcraftersco.pages.dev/static/media/bg_illustration_3.4fd52d6a6586919ab156.svg')] border-2 border-gray-200 rounded-lg w-[60vw] mr-5 p-7">
+      <div className="flex flex-col lg:flex-row justify-center">
+        <div className="bg-[url('https://develop.skillcraftersco.pages.dev/static/media/bg_illustration_3.4fd52d6a6586919ab156.svg')] border-2 border-gray-200 rounded-lg w-[90vw] lg:w-[60vw] mx-4 p-4 lg:p-7">
           <div className="flex flex-col items-center w-full mb-10">
             <h1 className="font-bold text-center w-full uppercase text-4xl mt-8">
               Take Free Demo
             </h1>
-            <div className="mt-8 flex w-[70%] justify-center">
+            <div className="mt-8 flex w-[90%] justify-center">
               <div className="flex items-center flex-col">
                 <img
                   className="sm:w-10 sm:h-10 h-6 w-6"
@@ -159,12 +161,12 @@ function DemoPage() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row justify-around">
-            <div>
-              {leftInput.map((input, index) => (
-                <div className="mb-7" key={input.id}>
+          <div className="flex flex-col lg:flex-row justify-between">
+            <div className="w-full lg:w-1/2">
+              {leftInput.map((input) => (
+                <div className="mb-4" key={input.id}>
                   <input
-                    className="shadow appearance-none border rounded w-[120%] py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
+                    className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
                     id={input.id}
                     type="text"
                     value={formData[input.value]}
@@ -176,11 +178,11 @@ function DemoPage() {
                 </div>
               ))}
             </div>
-            <div>
-              {rightInput.map((input, index) => (
-                <div className="mb-7" key={input.id}>
+            <div className="w-full lg:w-1/2">
+              {rightInput.map((input) => (
+                <div className="mb-4" key={input.id}>
                   <input
-                    className="shadow appearance-none border rounded w-[120%] py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
+                    className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
                     id={input.id}
                     type="text"
                     value={formData[input.value]}
@@ -195,14 +197,14 @@ function DemoPage() {
           </div>
           <div className="flex justify-center ">
             <button
-              className="mt-4 px-7 py-1 mx-2 my-4 text-[1.3rem] bg-green-600 rounded-lg text-white border-2 border-green-600 hover:bg-white hover:text-green-600"
+              className="mt-4 px-7 py-2 text-lg bg-green-600 rounded-lg text-white border-2 border-green-600 hover:bg-white hover:text-green-600"
               onClick={handleSubmit}
             >
               Register for Demo Class
             </button>
           </div>
         </div>
-        <div className="w-[33vw]">
+        <div className="w-[90vw] lg:w-[33vw] mx-4 mt-4 lg:mt-0">
           <div className="flex flex-col justify-center">
             {courses.map((course, index) => (
               <Card key={index} {...course} />
@@ -215,3 +217,4 @@ function DemoPage() {
 }
 
 export default DemoPage;
+

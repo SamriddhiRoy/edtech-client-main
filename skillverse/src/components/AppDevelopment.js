@@ -1,17 +1,20 @@
-import React from 'react';
+import React ,{ useEffect } from 'react';
 import { FaMobileAlt, FaCode, FaDatabase, FaRocket } from 'react-icons/fa';
 
 const AppDevelopmentPackages = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <div className="p-10 bg-gray-50 min-h-screen flex items-center justify-center">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
       <div className="flex items-center mb-8">
           <div className="w-1/2 pr-8">
           <img
-              src="/app.png" // Using web.png from the public folder
+              src="/app.png" 
               alt="Web Development"
               className="w-full max-w-[900px] h-[300px] rounded-lg shadow-lg animate-fadeIn object-cover"
-              loading="lazy" // Improves performance by lazy loading the image
+              loading="lazy" 
             />
           </div>
           <div className="w-1/2">
@@ -68,7 +71,7 @@ const AppDevelopmentPackages = () => {
         <div className="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg p-8">
           <h2 className="text-3xl font-bold text-center text-yellow-600 mb-4">App Development Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Basic Package */}
+          
             <div className="bg-white rounded-lg p-6 shadow-md animate-slide-left">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-yellow-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
@@ -95,7 +98,7 @@ const AppDevelopmentPackages = () => {
               </div>
             </div>
 
-            {/* Standard Package */}
+           
             <div className="bg-white rounded-lg p-6 shadow-md animate-slide-up">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-yellow-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
@@ -122,7 +125,7 @@ const AppDevelopmentPackages = () => {
               </div>
             </div>
 
-            {/* Premium Package */}
+         
             <div className="bg-white rounded-lg p-6 shadow-md animate-slide-right">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-yellow-500 text-white rounded-full flex items-center justify-center text-xl font-bold">

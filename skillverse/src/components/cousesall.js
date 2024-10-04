@@ -1,9 +1,14 @@
-import React from 'react';
+// HomePage.js
+import React ,{ useEffect }from 'react';
+import { Link } from 'react-router-dom';
 import CourseCard from './CourseCard';
 import { FaRobot, FaCode, FaPiggyBank, FaLanguage, FaBrain, FaMobileAlt, FaShieldAlt, FaCalculator } from 'react-icons/fa';
 import { SiPython } from 'react-icons/si';
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   const courses = [
     {
       icon: <FaRobot size={48} className="text-red-500" />,
@@ -97,7 +102,9 @@ const HomePage = () => {
       <h2 className="text-4xl font-bold text-center text-indigo-700 mt-8 mb-12">Our Courses</h2>
       <div className="flex flex-wrap justify-center">
         {courses.map((course, index) => (
-          <CourseCard key={index} {...course} />
+          <Link to={course.link} key={index}>
+            <CourseCard {...course} />
+          </Link>
         ))}
       </div>
     </div>
@@ -105,8 +112,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-
-
 
 

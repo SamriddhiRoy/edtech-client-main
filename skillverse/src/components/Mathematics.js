@@ -1,6 +1,9 @@
-import React from 'react';
+import React ,{ useEffect }from 'react';
 
 const MathematicsPackages = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   return (
     <div className="p-10 bg-green-50 min-h-screen flex items-center justify-center">
       <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">

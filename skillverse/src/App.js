@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-import Demo from "./components/Demo";
+import About from "./components/About";
 import Cousesall from "./components/Cousesall";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Footer from "./components/Footer";
@@ -11,7 +11,8 @@ import RoboCHAMPS from "./components/RoboCHAMPS";
 import Python from "./components/Python";
 import DemoPage from "./pages/Demo";
 
-// Import new components
+
+
 import AppDevelopment from "./components/AppDevelopment";
 import Cybersecurity from "./components/Cybersecurity";
 import Mathematics from "./components/Mathematics";
@@ -29,7 +30,7 @@ function App() {
             element={
               <>
                 <Banner />
-                <Demo />
+                <About />
                 <Cousesall />
                 <TestimonialsSection />
                 <Faq />
@@ -39,8 +40,10 @@ function App() {
           <Route path="/robochamps" element={<RoboCHAMPS />} />
           <Route path="/python" element={<Python />} />
           <Route path="/demo" element={<DemoPage />} />
-          
-          {/* Add new routes */}
+          <Route path="/about" element={<About />} /> 
+          <Route path="/courses" element={<Cousesall />} /> 
+
+         
           <Route path="/appdevelopment" element={<AppDevelopment />} />
           <Route path="/cybersecurity" element={<Cybersecurity />} />
           <Route path="/mathematics" element={<Mathematics />} />
